@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cacilda Produtos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #ff6f00;
+            padding: 10px;
+            color: white;
+        }
+        .header .nav-link.adm-menu {
+            margin-left: 0px;
+            margin-right: 0px; 
+        }
+        .header .nav-link {
+            color: white;
+            margin-right: 180px;
+        }
+        .header img {
+            height: 50px;
+            margin-left: 300px;
+        }
+        .container {
+            max-width: 800px;
+            margin-top: -40px;
+            display: flex;
+            justify-content: center;
+        }
+        .form-container {
+            background-color: white;
+            width: 600px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+        .form-container form {
+            flex: 1;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-group img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .form-group input[type="file"] {
+            display: none;
+        }
+        .btn-save {
+            background-color: #ff6f00;
+            border: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 30px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-save:hover {
+            background-color: #e65c00;
+        }
+        .btn-save:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        h3 {
+            margin-top: 50px;
+            margin-left: 110px;
+            font-family: sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+        }
+        .image-upload {
+    text-align: left;
+    margin-right: 20px;
+}
+.image-upload label {
+    cursor: pointer;
+}
+.image-upload img {
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+    border: 2px dashed #ccc;
+    padding: 10px;
+    display: block;
+    margin-bottom: 15px;
+}
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="header d-flex justify-content-between align-items-center">
+        <img src="imagens/logo.png" alt="Logo">
+        <div class="d-flex align-items-center">
+            <a href="menuADM.html" class="nav-link adm-menu">Menu ADM</a>
+            <a href="login.html" class="nav-link">Sair</a>
+        </div>
+    </div>
+    <h3>Cadastro de produto:</h3>
+    <div class="container">
+        <div class="form-container">
+            <div class="image-upload">
+                <label for="image">
+                    <img id="img-preview" src="imagens/placeholder.png" alt="Cadastrar Imagem">
+                </label>
+             
+            </div>
+            <form id="product-form">
+                <div class="form-group">
+                    <label for="ean">Código EAN</label>
+                    <input type="text" class="form-control" id="ean" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-name">Nome do produto</label>
+                    <input type="text" class="form-control" id="product-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="brand">Marca</label>
+                    <input type="text" class="form-control" id="brand" required>
+                </div>
+                <div class="form-group">
+                    <label for="supplier">Fornecedor</label>
+                    <input type="text" class="form-control" id="supplier" required>
+                </div>
+                <div class="form-group">
+                    <label for="supplier">Cate</label>
+                    <input type="text" class="form-control" id="supplier" required>
+                </div>
+              
+                <div class="form-group">
+                    <label for="observation">Descrição</label>
+                    <textarea class="form-control" id="observation" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-save" id="save-btn" disabled>Salvar</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('product-form');
+            const saveBtn = document.getElementById('save-btn');
+            const inputs = form.querySelectorAll('input, textarea');
+            const imageInput = document.getElementById('image');
+            const imgPreview = document.getElementById('img-preview');
+
+            function checkFormValidity() {
+                let allFilled = true;
+                inputs.forEach(input => {
+                    if (!input.value.trim()) {
+                        allFilled = false;
+                    }
+                });
+                saveBtn.disabled = !allFilled;
+            }
+
+            inputs.forEach(input => {
+                input.addEventListener('input', checkFormValidity);
+            });
+
+            checkFormValidity();
+
+            imageInput.addEventListener('change', function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        imgPreview.src = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    imgPreview.src = 'imagens/placeholder.png';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

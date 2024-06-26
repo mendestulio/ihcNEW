@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cacilda Produtos - ADM</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #ff6f00;
+            padding: 10px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header img {
+            height: 50px;
+            margin-left: 300px;
+        }
+        .header .nav-link {
+            color: white;
+            margin-right: 180px;
+        
+        }
+        .header .nav-link.adm-menu {
+            margin-left: 0px;
+            margin-right: 0px; 
+        }
+        .container {
+            max-width: 800px;
+            margin-top: 30px;
+        }
+        .btn-group {
+            display: flex;
+          
+       
+            /* Adicionando margem negativa para corrigir espaçamento */
+        }
+        .btn-group .btn {
+            background-color: #ff6f00;
+            color: white;
+          
+            padding: 10px 20px;
+            font-size: 16px;
+           
+            margin: 5px; /* Ajustando margem entre os botões */
+            flex: 1 1 calc(33% - 10px); /* Calculando tamanho dos botões */
+            text-align: center;
+        }
+     
+     
+        h3 {
+            margin-top: 20px;
+            margin-left: 20px;
+            font-family: sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .table-container {
+            margin-top: 20px;
+        }
+        .table {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .table th, .table td {
+            text-align: center;
+            padding: 15px;
+        }
+        .table th {
+            background-color: #dcdcdc;
+        }
+        .table tbody tr:nth-child(odd) {
+            background-color: #ffeda6;
+        }
+        .table tbody tr:nth-child(even) {
+            background-color: #ffdc97;
+        }
+    </style>
+</head>
+<body>
+    <div class="header d-flex justify-content-between align-items-center">
+        <img src="imagens/logo.png" alt="Logo">
+        <div class="d-flex align-items-center">
+           
+            <a href="login.html" class="nav-link">Sair</a>
+            
+         
+        </div>
+    </div>
+    <div class="container">
+        <h3>ADM</h3>
+        <div class="btn-group">
+            <button class="btn" onclick="window.location.href='produtosAdm.html';">Estoque</button>
+
+            <button class="btn" onclick="window.location.href='movimentacaoADM.html';">Movimentações</button>
+            <button class="btn"onclick="window.location.href='cadastroproduto.html';">Cadastrar Produto</button>
+            <button class="btn" onclick="window.location.href='entradadeproduto.html';">Entrada Produto</button>
+            <button class="btn" onclick="window.location.href='clientes.html';">Clientes</button>
+   
+        </div>
+        <h3>Últimas movimentações</h3>
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>EAN</th>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                        <th>Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8132719810923</td>
+                        <td>Mandiopã sabor Batata</td>
+                        <td>-7</td>
+                        <td>16/05/2024 - 16:41</td>
+                    </tr>
+                    <tr>
+                        <td>8172398127392</td>
+                        <td>Mandiopã sabor Alho</td>
+                        <td>+25</td>
+                        <td>15/05/2024 - 11:17</td>
+                    </tr>
+                    <tr>
+                        <td>9012312381092</td>
+                        <td>Mandiopã sabor Camarão</td>
+                        <td>-5</td>
+                        <td>15/05/2024 - 09:35</td>
+                    </tr>
+                    <tr>
+                        <td>1231902380122</td>
+                        <td>Mandiopã sabor Bacon</td>
+                        <td>+15</td>
+                        <td>14/05/2024 - 14:01</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

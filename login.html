@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Login</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+        .login-form {
+            background-color: #E27B3F;
+            padding: 30px;
+            border-radius: 80px;
+            width: 340px;
+            height: auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+        }
+        .login-form .logo {
+            text-align: center;
+            margin-bottom: 70px;
+            margin-top: 20px;
+        }
+        .login-form .logo img {
+            width: 150px;
+            height: 60px;
+        }
+        .login-form h2 {
+            text-align: center;
+            font-family: sans-serif;
+            margin-bottom: 20px;
+            color: #000000;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+        }
+        .login-form .form-group label {
+            color: #000000;
+            font-family: sans-serif;
+        }
+        .login-form .form-control {
+            border-radius: 20px; /* Arredonda as bordas dos inputs */
+        }
+        .login-form .btn {
+            width: 100%;
+            max-width: 120px; /* Define um máximo para o tamanho do botão */
+            height: 40px;
+            margin: 0 auto; /* Centraliza horizontalmente */
+            display: flex; /* Permite o uso de flexbox para centralizar verticalmente */
+            justify-content: center; /* Centraliza o conteúdo horizontalmente */
+            align-items: center; /* Centraliza o conteúdo verticalmente */
+            background-color: #000;
+            color: #fff;
+            border-radius: 20px;
+            font-family: sans-serif;
+            text-decoration: none; /* Remove o sublinhado do link */
+            margin-top: 60px;
+            margin-bottom: 20px;
+        }
+        .login-form .btn:hover {
+            background-color: #333; /* Cor de fundo ao passar o mouse */
+        }
+        .login-form .links {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .login-form .links a {
+            color: #000000;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .login-form .links a:hover {
+            text-decoration: underline;
+        }
+        .links{
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        .error-message {
+            color: rgb(255, 255, 255);
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-form">
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logo">
+        </div>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="Usuario">Usuário:</label>
+                <input type="text" class="form-control" id="Usuario" placeholder="Digite seu usuário">
+                <div id="usuarioError" class="error-message">Por favor, preencha seu usuário.</div>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
+                <div id="senhaError" class="error-message">Por favor, preencha sua senha.</div>
+            </div>
+            <a href="#" onclick="validarForm()" class="btn">Entrar</a>
+            <div class="links">
+                <a href="#">Recuperar senha</a>
+                <br>
+                Não tem conta?<a href="cadastro.html" style="color: #1c2bff">Cadastrar</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validarForm() {
+            // Captura os valores dos campos
+            var usuario = document.getElementById('Usuario').value;
+            var senha = document.getElementById('senha').value;
+
+            // Verifica se o campo usuário está vazio
+            if (!usuario) {
+                document.getElementById('usuarioError').style.display = 'block';
+            } else {
+                document.getElementById('usuarioError').style.display = 'none';
+            }
+
+            // Verifica se o campo senha está vazio
+            if (!senha) {
+                document.getElementById('senhaError').style.display = 'block';
+            } else {
+                document.getElementById('senhaError').style.display = 'none';
+            }
+
+            // Verifica se todos os campos estão preenchidos
+            if (usuario && senha) {
+                // Verifica se é o administrador
+                if (usuario === 'adm' && senha === '123') {
+                    // Redireciona para a página do administrador
+                    window.location.href = 'menuADM.html';
+                } else {
+                    // Redireciona para a página do cliente
+                    window.location.href = 'telaprincipalCliente.html';
+                }
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

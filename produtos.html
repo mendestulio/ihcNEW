@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos de Mandiopã</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <style>
+     
+        .header {
+            background-color: #ff6f00;
+            padding: 10px;
+            color: white;
+        }
+        .header img {
+            height: 50px;
+            margin-left: 300px;
+        }
+        .header .nav-link {
+            color: white;
+            margin-right: 15px;
+        }
+        .product-image {
+            width: 70%; /* Usando 100% para ocupar o espaço da coluna */
+            max-height: 250px; /* Altura máxima para evitar distorções */
+            object-fit: cover; /* Para manter proporções e cortar imagens conforme necessário */
+            border-radius: 8px; /* Borda arredondada */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            
+        }
+        .product-card a {
+    color: inherit; /* Herda a cor do texto do pai (div.product-card) */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    display: block; /* Faz o link ocupar todo o espaço do card */
+    transition: color 0.3s; /* Adiciona uma transição suave para a mudança de cor */
+}
+
+
+
+        .footer-custom {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer-custom a {
+            color: #fff;
+            margin: 0 10px;
+        }
+        .footer-custom img {
+            width: 20px;
+            height: 20px;
+        }
+        .original-price {
+            text-decoration: line-through;
+            margin-right: 10px;
+        }
+        .discounted-price {
+            color: #ff6f00;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="header d-flex justify-content-between align-items-center">
+        <img src="imagens/logo.png" alt="Logo">
+        <div class="d-flex align-items-center">
+            <a href="telaprincipalCliente.html" class="nav-link">Início</a>
+       
+            <a href="produtos.html" class="nav-link">Loja</a>
+            <a href="contato.html" class="nav-link">Contato</a>
+         
+            <a href="carrinho.html" class="nav-link"><i class="fas fa-shopping-cart"></i></a>
+            <a href="login.html" class="nav-link">Sair</a>
+            
+            
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <div class="container mt-4">
+        <h2 class="text-center">TODOS OS SABORES DE MANDIOPÃ</h2>
+        <br>
+        <div class="row">
+            <div class="col-md-4 product-card">
+                <a href="produtoBacon.html"> <!-- Link para a página do Mandiopã Sabor Bacon -->
+                    <img src="imagens/bacon_edited.png" alt="Mandiopã Sabor Bacon" class="product-image">
+                    <h5>Mandiopã Sabor Bacon</h5>
+                    <p><span class="original-price">R$ 14,60</span><span class="discounted-price">R$ 9,60</span></p>
+                </a>
+            </div>
+            <!-- Repita o mesmo padrão para os outros produtos -->
+            
+            <div class="col-md-4 product-card">
+                <a href="produtoBatata.html"> 
+                    <img src="imagens/batata_edited.png" alt="Mandiopã Sabor Batata" class="product-image">
+                    <h5>Mandiopã Sabor Batata</h5>
+                    <p><span class="original-price">R$ 14,60</span><span class="discounted-price">R$ 9,60</span></p>
+                </a>
+            </div>
+            <div class="col-md-4 product-card">
+                <a href="produtoNatural.html">
+                    <img src="imagens/natural_edited.png" alt="Mandiopã Sabor Natural" class="product-image">
+                    <h5>Mandiopã Sabor Natural</h5>
+                    <p><span class="original-price">R$ 14,60</span><span class="discounted-price">R$ 9,60</span></p>
+                </a>
+            </div>
+            <div class="col-md-4 product-card">
+                <a href="produtoQueijo.html"> <!-- Link para a página do Mandiopã Sabor Bacon -->
+                    <img src="imagens/queijo_edited_edited.png" alt="Mandiopã Sabor Queijo" class="product-image">
+                    <h5>Mandiopã Sabor Queijo</h5>
+                    <p><span class="original-price">R$ 14,60</span><span class="discounted-price">R$ 9,60</span></p>
+                </a>
+            </div>
+            <div class="col-md-4 product-card">
+                <a href="produtoBacon.html"> <!-- Link para a página do Mandiopã Sabor Bacon -->
+                    <img src="imagens/t_edited.png" alt="Mandiopã Sabor Bacon" class="product-image">
+                    <h5>Mandiopã Sabor Camarão</h5>
+                    <p><span class="original-price">R$ 14,60</span><span class="discounted-price">R$ 9,60</span></p>
+                </a>
+            </div>
+            <div class="col-md-4 product-card">
+                <a href="produtoBacon.html"> <!-- Link para a página do Mandiopã Sabor Bacon -->
+                    <img src="imagens/alho_edited.png" alt="Mandiopã Sabor Alho" class="product-image">
+                    <h5>Mandiopã Sabor Alho</h5>
+                    <p><span class="original-price">R$ 14,60</span><span class="discounted-price">R$ 9,60</span></p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-custom mt-4">
+        <p>cacildaprodutos@gmail.com</p>
+        <p>(49)9527-0727</p>
+       
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

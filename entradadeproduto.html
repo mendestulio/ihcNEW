@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cacilda Produtos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #ff6f00;
+            padding: 10px;
+            color: white;
+        }
+        .header .nav-link.adm-menu {
+            margin-left: 0px;
+            margin-right: 0px; 
+        }
+        .header .nav-link {
+            color: white;
+            margin-right: 180px;
+        }
+        .header img {
+            height: 50px;
+            margin-left: 300px;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 10px;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .btn-save {
+            background-color: #ff6f00;
+            border: none;
+            color: white;
+        }
+        .btn-save:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        h3 {
+            margin-top: 50px;
+            margin-left: 110px;
+            font-family: sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header d-flex justify-content-between align-items-center">
+        <img src="imagens/logo.png" alt="Logo">
+        <div class="d-flex align-items-center">
+            <a href="menuADM.html" class="nav-link adm-menu">Menu ADM</a>
+            <a href="login.html" class="nav-link">Sair</a>
+        </div>
+    </div>
+    <h3>Entrada de produto:</h3>
+    <div class="container">
+        <div class="form-container">
+            <form id="product-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="ean">Código EAN</label>
+                            <input type="text" class="form-control" id="ean" required>
+                            <span id="ean-error" class="error-message">Por favor, preencha o Código EAN.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="product-name">Nome do produto</label>
+                            <input type="text" class="form-control" id="product-name" required>
+                            <span id="product-name-error" class="error-message">Por favor, preencha o Nome do produto.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="brand">Marca</label>
+                            <input type="text" class="form-control" id="brand" required>
+                            <span id="brand-error" class="error-message">Por favor, preencha a Marca.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="batch">Lote</label>
+                            <input type="text" class="form-control" id="batch" required>
+                            <span id="batch-error" class="error-message">Por favor, preencha o Lote.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="price">Preço</label>
+                            <input type="text" class="form-control" id="price" required>
+                            <span id="price-error" class="error-message">Por favor, preencha o Preço.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="quantity">Quantidade</label>
+                            <input type="text" class="form-control" id="quantity" required>
+                            <span id="quantity-error" class="error-message">Por favor, preencha a Quantidade.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="supplier">Fornecedor</label>
+                            <input type="text" class="form-control" id="supplier" required>
+                            <span id="supplier-error" class="error-message">Por favor, preencha o Fornecedor.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="invoice">Nota Fiscal</label>
+                            <input type="text" class="form-control" id="invoice" required>
+                            <span id="invoice-error" class="error-message">Por favor, preencha a Nota Fiscal.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="observation">Observação</label>
+                            <textarea class="form-control" id="observation" rows="3" required></textarea>
+                            <span id="observation-error" class="error-message">Por favor, preencha a Observação.</span>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-save" id="save-btn">Salvar</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('product-form');
+            const saveBtn = document.getElementById('save-btn');
+            const inputs = form.querySelectorAll('input, textarea');
+
+            function validateForm() {
+                let isValid = true;
+
+                inputs.forEach(input => {
+                    if (!input.value.trim()) {
+                        const errorMessage = `Por favor, preencha o ${input.getAttribute('id').replace('-', ' ')}.`;
+                        const errorElement = form.querySelector(`#${input.getAttribute('id')}-error`);
+                        errorElement.innerText = errorMessage;
+                        errorElement.style.display = 'block';
+                        isValid = false;
+                    } else {
+                        const errorElement = form.querySelector(`#${input.getAttribute('id')}-error`);
+                        errorElement.innerText = '';
+                        errorElement.style.display = 'none';
+                    }
+                });
+
+                return isValid;
+            }
+
+            saveBtn.addEventListener('click', function() {
+                if (validateForm()) {
+                    // Aqui você pode enviar o formulário, pois está válido
+                    alert('Formulário válido. Enviando...');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+        .registration-form {
+            background-color: #E27B3F;
+            padding: 30px;
+            border-radius: 80px;
+            width: 340px;
+        }
+        .registration-form .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .registration-form .logo img {
+            width: 120px;
+            height: 50px;
+        }
+        .registration-form h2 {
+            text-align: left;
+            font-family: sans-serif;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+        .registration-form .form-group label {
+            color: #000000;
+            width: 120%;
+            font-family: sans-serif;
+        }
+        .registration-form .btn {
+                  width: 100%;
+            max-width: 130px; /* Define um máximo para o tamanho do botão */
+            max-height: 40px;
+            margin: 0 auto; /* Centraliza horizontalmente */
+            display: flex; /* Permite o uso de flexbox para centralizar verticalmente */
+            justify-content: center; /* Centraliza o conteúdo horizontalmente */
+            align-items: center; /* Centraliza o conteúdo verticalmente */
+            background-color: #000;
+            color: #fff;
+            border-radius: 90px;
+            font-family: sans-serif;
+            text-decoration: none; /* Remove o sublinhado do link */
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-form">
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logo">
+        </div>
+        <h2>Cadastre-se</h2>
+        <form id="cadastroForm">
+            <div class="form-group">
+                <label for="nomeCompleto">Nome Completo:</label>
+                <input type="text" class="form-control" id="nomeCompleto" placeholder="Nome Completo">
+                <span id="nomeCompletoError" style="color: rgb(255, 255, 255); display: none;">Por favor, preencha seu nome.</span>
+            </div>
+            <div class="form-group">
+                <label for="cpfCnpj">CPF/CNPJ:</label>
+                <input type="text" class="form-control" id="cpfCnpj" placeholder="CPF/CNPJ">
+                <span id="cpfCnpjError" style="color:rgb(255, 255, 255);; display: none;">Por favor, preencha seu CPF/CNPJ.</span>
+            </div>
+            <div class="form-group">
+                <label for="contato">Contato:</label>
+                <input type="text" class="form-control" id="contato" placeholder="Contato">
+                <span id="contatoError" style="color:rgb(255, 255, 255);; display: none;">Por favor, preencha seu contato.</span>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" id="email" placeholder="E-mail">
+                <span id="emailError" style="color:rgb(255, 255, 255);; display: none;">Por favor, preencha seu e-mail.</span>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" class="form-control" id="senha" placeholder="Senha">
+                <span id="senhaError" style="color: rgb(255, 255, 255);; display: none;">Por favor, preencha sua senha.</span>
+            </div>
+            <a href="#" onclick="validarForm()" class="btn">Cadastrar</a>
+        </form>
+    </div>
+
+    <script>
+        function validarForm() {
+            // Captura os valores dos campos
+            var nomeCompleto = document.getElementById('nomeCompleto').value;
+            var cpfCnpj = document.getElementById('cpfCnpj').value;
+            var contato = document.getElementById('contato').value;
+            var email = document.getElementById('email').value;
+            var senha = document.getElementById('senha').value;
+
+            // Verifica se o campo nomeCompleto está vazio
+            if (!nomeCompleto) {
+                document.getElementById('nomeCompletoError').style.display = 'block';
+            } else {
+                document.getElementById('nomeCompletoError').style.display = 'none';
+            }
+
+            // Verifica se o campo cpfCnpj está vazio
+            if (!cpfCnpj) {
+                document.getElementById('cpfCnpjError').style.display = 'block';
+            } else {
+                document.getElementById('cpfCnpjError').style.display = 'none';
+            }
+
+            // Verifica se o campo contato está vazio
+            if (!contato) {
+                document.getElementById('contatoError').style.display = 'block';
+            } else {
+                document.getElementById('contatoError').style.display = 'none';
+            }
+
+            // Verifica se o campo email está vazio
+            if (!email) {
+                document.getElementById('emailError').style.display = 'block';
+            } else {
+                document.getElementById('emailError').style.display = 'none';
+            }
+
+            // Verifica se o campo senha está vazio
+            if (!senha) {
+                document.getElementById('senhaError').style.display = 'block';
+            } else {
+                document.getElementById('senhaError').style.display = 'none';
+            }
+
+            // Verifica se todos os campos estão preenchidos
+            if (nomeCompleto && cpfCnpj && contato && email && senha) {
+                // Redireciona para a página de sucesso ou realiza outra ação
+                window.location.href = 'telaprincipalCliente.html';
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

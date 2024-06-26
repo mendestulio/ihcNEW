@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cacilda Produtos</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .header {
+            background-color: #ff6f00;
+            padding: 10px;
+            color: white;
+        }
+        .header .nav-link.adm-menu {
+            margin-left: 0px;
+            margin-right: 0px; 
+        }
+        .header .nav-link {
+            color: white;
+            margin-right: 180px;
+        
+        }
+        .header img {
+            height: 50px;
+            margin-left: 300px;
+        }
+        .table thead th {
+            background-color: #f8f9fa;
+            color: #000;
+            font-family: sans-serif;
+            
+        }
+        .table tbody tr:nth-child(odd) {
+            background-color: #ffce7e;
+            font-family: sans-serif;
+        }
+        .table tbody tr:nth-child(even) {
+            background-color: #fff9c4;
+            font-family: sans-serif;
+        }
+        .icons img {
+            width: 30px;
+            height: 30px;
+        }
+        .btn-custom {
+            background-color: #e57300;
+            color: white;
+        }
+
+        h2{
+
+            font-family: sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+        }
+    </style>
+</head>
+<body>
+    <div class="header d-flex justify-content-between align-items-center">
+        <img src="imagens/logo.png" alt="Logo">
+        <div class="d-flex align-items-center">
+            <a href="menuADM.html" class="nav-link adm-menu">Menu ADM</a>
+            <a href="login.html" class="nav-link">Sair</a>
+        </div>
+    </div>
+    
+    <div class="container mt-5">
+        <h2 class="mb-4">Movimentações:</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Cliente</th>
+                    <th>CPF</th>
+                    <th>Cidade</th>
+                    <th>Data de cadastro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Gabriel Mendes</td>
+                    <td>09809809887</td>
+                    <td>Curitiba</td>
+                    <td>18/06/2024 - 16:41</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Joao Neto</td>
+                    <td>12313212398</td>
+                    <td>Curitiba</td>
+                    <td>15/06/2024 - 11:17</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ana Clara</td>
+                    <td>12345678900</td>
+                    <td>São Paulo</td>
+                    <td>19/06/2024 - 10:00</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Lucas Silva</td>
+                    <td>98765432100</td>
+                    <td>Rio de Janeiro</td>
+                    <td>19/06/2024 - 10:05</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Mariana Souza</td>
+                    <td>10293847561</td>
+                    <td>Curitiba</td>
+                    <td>19/06/2024 - 10:10</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Pedro Henrique</td>
+                    <td>56473829100</td>
+                    <td>São Paulo</td>
+                    <td>19/06/2024 - 10:15</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Carla Fernandes</td>
+                    <td>19283746500</td>
+                    <td>Porto Alegre</td>
+                    <td>19/06/2024 - 10:20</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Rafael Almeida</td>
+                    <td>09876543211</td>
+                    <td>Curitiba</td>
+                    <td>19/06/2024 - 10:25</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Fernanda Costa</td>
+                    <td>12309845670</td>
+                    <td>Belo Horizonte</td>
+                    <td>19/06/2024 - 10:30</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Bruno Ramos</td>
+                    <td>45678912300</td>
+                    <td>Salvador</td>
+                    <td>19/06/2024 - 10:35</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Juliana Azevedo</td>
+                    <td>23456789012</td>
+                    <td>Fortaleza</td>
+                    <td>19/06/2024 - 10:40</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Felipe Martins</td>
+                    <td>87654321000</td>
+                    <td>Curitiba</td>
+                    <td>19/06/2024 - 10:45</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Aline Rocha</td>
+                    <td>34567890123</td>
+                    <td>São Paulo</td>
+                    <td>19/06/2024 - 10:50</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Rodrigo Vieira</td>
+                    <td>98765432123</td>
+                    <td>Curitiba</td>
+                    <td>19/06/2024 - 10:55</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Larissa Mendes</td>
+                    <td>12345609876</td>
+                    <td>Brasília</td>
+                    <td>19/06/2024 - 11:00</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Thiago Souza</td>
+                    <td>65432109876</td>
+                    <td>Recife</td>
+                    <td>19/06/2024 - 11:05</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Isabela Carvalho</td>
+                    <td>32165498700</td>
+                    <td>Curitiba</td>
+                    <td>19/06/2024 - 11:10</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Matheus Ferreira</td>
+                    <td>12378945601</td>
+                    <td>São Paulo</td>
+                    <td>19/06/2024 - 11:15</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Camila Pereira</td>
+                    <td>56789012345</td>
+                    <td>Rio de Janeiro</td>
+                    <td>19/06/2024 - 11:20</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Victor Lima</td>
+                    <td>78901234567</td>
+                    <td>Curitiba</td>
+                    <td>19/06/2024 - 11:25</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Mariana Oliveira</td>
+                    <td>89012345678</td>
+                    <td>São Paulo</td>
+                    <td>19/06/2024 - 11:30</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Ricardo Santos</td>
+                    <td>90123456789</td>
+                    <td>Salvador</td>
+                    <td>19/06/2024 - 11:35</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Gustavo Moreira</td>
+                    <td>12309876543</td>
+                    <td>Curitiba</td>
+                    <td>19/06/2024 - 11:40</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Rafaela Gomes</td>
+                    <td>23456789012</td>
+                    <td>Fortaleza</td>
+                    <td>19/06/2024 - 11:45</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Henrique Alves</td>
+                    <td>34567890123</td>
+                    <td>Curitiba</td>
+                    <td>19/06/2024 - 11:50</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Natália Silva</td>
+                    <td>45678901234</td>
+                    <td>São Paulo</td>
+                    <td>19/06/2024 - 11:55</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>Roberto Pereira</td>
+                    <td>56789012345</td>
+                    <td>Curitiba</td>
+                    <td>19/06/2024 - 12:00</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>Elaine Souza</td>
+                    <td>67890123456</td>
+                    <td>Porto Alegre</td>
+                    <td>19/06/2024 - 12:05</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>Fernando Reis</td>
+                    <td>78901234567</td>
+                    <td>Curitiba</td>
+                    <td>19/06/2024 - 12:10</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>Sabrina Costa</td>
+                    <td>89012345678</td>
+                    <td>São Paulo</td>
+                    <td>19/06/2024 - 12:15</td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>André Oliveira</td>
+                    <td>90123456789</td>
+                    <td>Curitiba</td>
+                    <td>19/06/2024 - 12:20</td>
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td>Paula Silva</td>
+                    <td>12345678901</td>
+                    <td>Brasília</td>
+                    <td>19/06/2024 - 12:25</td>
+                </tr>
+                <tr>
+                    <td>33</td>
+                    <td>Leandro Mendes</td>
+                    <td>87654321009</td>
+                    <td>Brasília</td>
+                    <td>19/06/2024 - 12:00</td>
+                </tr>
+                <tr>
+                    <td>34</td>
+                    <td>Juliana Silva</td>
+                    <td>76543210987</td>
+                    <td>São Paulo</td>
+                    <td>19/06/2024 - 12:05</td>
+                </tr>
+                <tr>
+                    <td>35</td>
+                    <td>Renato Oliveira</td>
+                    <td>65432109876</td>
+                    <td>Curitiba</td>
+                    <td>19/06/2024 - 12:10</td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td>Priscila Souza</td>
+                    <td>54321098765</td>
+                    <td>Rio de Janeiro</td>
+                    <td>19/06/2024 - 12:15</td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td>Marcos Silva</td>
+                    <td>43210987654</td>
+                    <td>Curitiba</td>
+                    <td>19/06/2024 - 12:20</td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>Patrícia Fernandes</td>
+                    <td>32109876543</td>
+                    <td>São Paulo</td>
+                    <td>19/06/2024 - 12:25</td>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td>Eduardo Costa</td>
+                    <td>21098765432</td>
+                    <td>Curitiba</td>
+                    <td>19/06/2024 - 12:30</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>Cláudia Rocha</td>
+                    <td>10987654321</td>
+                    <td>Salvador</td>
+                    <td>19/06/2024 - 12:35</td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>Ricardo Martins</td>
+                    <td>09876543210</td>
+                    <td>Curitiba</td>
+                    <td>19/06/2024 - 12:40</td>
+                </tr>
+                <tr>
+                    <td>42</td>
+                    <td>Fernanda Azevedo</td>
+                    <td>98765432109</td>
+                    <td>São Paulo</td>
+                    <td>19/06/2024 - 12:45</td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td>Leonardo Alves</td>
+                    <td>87654321098</td>
+                    <td>Fortaleza</td>
+                    <td>19/06/2024 - 12:50</td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>Patrícia Mendes</td>
+                    <td>76543210987</td>
+                    <td>Curitiba</td>
+                    <td>19/06/2024 - 12:55</td>
+                </tr>
+                <tr>
+                    <td>45</td>
+                    <td>Renan Lima</td>
+                    <td>65432109876</td>
+                    <td>São Paulo</td>
+                    <td>19/06/2024 - 13:00</td>
+                </tr>
+                <tr>
+                    <td>46</td>
+                    <td>Amanda Oliveira</td>
+                    <td>54321098765</td>
+                    <td>Curitiba</td>
+                    <td>19/06/2024 - 13:05</td>
+                </tr>
+                <tr>
+                    <td>47</td>
+                    <td>Lucas Almeida</td>
+                    <td>43210987654</td>
+                    <td>Porto Alegre</td>
+                    <td>19/06/2024 - 13:10</td>
+                </tr>
+                <tr>
+                    <td>48</td>
+                    <td>Daniel Souza</td>
+                    <td>32109876543</td>
+                    <td>Curitiba</td>
+                    <td>19/06/2024 - 13:15</td>
+                </tr>
+                <tr>
+                    <td>49</td>
+                    <td>Gabriela Costa</td>
+                    <td>21098765432</td>
+                    <td>São Paulo</td>
+                    <td>19/06/2024 - 13:20</td>
+                </tr>
+                <tr>
+                    <td>50</td>
+                    <td>Marcelo Santos</td>
+                    <td>10987654321</td>
+                    <td>Curitiba</td>
+                    <td>19/06/2024 - 13:25</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
